@@ -7,28 +7,32 @@
     <title>Psychic Game</title>
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Ropa+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Ropa+Sans" rel="stylesheet">
 </head>
 <body>
     
-    <div id="game">
-
-    <h1>Psychic Game</h1>
-    
-    <p>Guess what letter I am thinking</p>
-
-    <div>
-        <ul>
-            <li class="lines"><p id="wins">Wins:</p></li>
-            <li class="lines"><p id="losses">Losses:</p></li>
-            <li class="lines"><p id="guesses-left">Guesses Left:</p></li>
-            <li class="lines"><p id="letters-guessed">Letters Guessed:</p></li>
-                                    
-        </ul>
+    <div id="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Psychic Game</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p id="instructions">Pick a letter, any letter!</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12"id="game">
+                    <ul>
+                        <li class="lines"><p id="wins">Wins:</p></li>
+                        <li class="lines"><p id="losses">Losses:</p></li>
+                        <li class="lines"><p id="guesses-left">Guesses Left:</p></li>
+                        <li class="lines"><p id="letters-guessed">Letters Guessed:</p></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
-    
-
-</div>
 <script src="assets/javascript/game.js"></script>
 </body>
 </html>

@@ -25,7 +25,7 @@ var userLettersGuessed = function () {
     document.getElementById("letters-guessed").innerHTML = "Letters guessed: " + guessedLetters.join(', ')
 }
 
- 
+//resets game 
 var reset = function () {
      totalGuesses = 9;
      guessesLeft = 9;
@@ -36,7 +36,7 @@ var reset = function () {
      userLettersGuessed();
     
     };
-
+//pressing a key will begin the game
  document.onkeyup = function(event) {
      guessesLeft--;
      var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
@@ -45,20 +45,21 @@ var reset = function () {
      updateGuessLeft();
      userLettersGuessed();
 
+     //if user has more than 0 guesses left the game will run until the user wins or loses
      if (guessesLeft > 0) {
          if (userGuess == newLetter) {
              wins++;
              document.getElementById("wins").innerHTML = 'Wins: ' + wins;
-             console.log('You know what I know');
+             alert('You know what I know');
              reset();
             }
         }
-         
+         //once the guesses reaches 0 the game will end and reset
             else if(guessesLeft==0) {
              //you lose
              losses++;
              document.getElementById("losses").innerHTML = 'Losses: ' + losses;
-             console.log("you know nothing");
+             alert("you know nothing");
              reset();
             }
 }
